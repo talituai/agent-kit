@@ -37,8 +37,8 @@ platform code, no generated client and no database access of any kind.
 
 | Skill or command | Does |
 |---|---|
-| `/lead-magnet` | turns an offer, audience and campaign brief into an editable calculator, quiz or diagnostic draft through the platform's `generate_form_draft` operation, with its sources cited. It never publishes |
-| `/publish` | publishes a reviewed draft as an immutable form version and returns the hosted URL and embed snippet |
+| `/lead-magnet` | turns an offer, audience and campaign brief into an editable calculator, quiz or diagnostic draft through the platform's `generate_form_draft` operation, with its sources cited. It never publishes without the person's approval |
+| `/publish` | asks the person to approve, then publishes the draft as an immutable form version on a yes and returns the hosted URL and embed snippet; a no leaves it unpublished (platform D25) |
 | `/connect` | connects a workspace destination (webhook, Slack, then Zapier and HubSpot) and sends a test lead packet |
 | `/leads` | shows recent submissions with their score, reasons and recommended next action |
 

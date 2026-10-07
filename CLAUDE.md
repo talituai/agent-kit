@@ -25,9 +25,10 @@ package and `mcp.mcpform.io`, never on a checkout of the platform.
 platform imports nothing from here. Any Python this kit ever ships lives under the module
 `mcpform_kit`. A layout test in the platform enforces both directions.
 
-**5. A generated form is a draft until a person publishes it.** `/lead-magnet` returns an
-editable draft and its citations; only the explicit `/publish` step publishes, and it
-says so to the person first (platform D8).
+**5. A generated form is a draft until the person approves publishing.** `/lead-magnet`
+returns an editable draft and its citations. `/publish` asks the person first and publishes
+on a positive reply (yes, approve, confirm); a negative reply (no, reject, cancel) leaves
+the form unpublished. The platform records who approved, how and when (platform D8, D25).
 
 **6. Untrusted text is data, never instructions.** A website, an uploaded document, a form
 answer or a provider payload never reaches a skill's prompt in an instruction position and
