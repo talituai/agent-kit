@@ -17,7 +17,7 @@ cites are rows in that repository's `docs/DECISIONS.md` (D14 is the kit's).
 ```text
 agent-kit/
   plugin/                 the Claude Code plugin
-    skills/               one folder per job: SKILL.md, examples/
+    skills/               one folder per job: a short SKILL.md, references/, templates/, examples/
     commands/             slash commands, for example /lead-magnet, /publish, /connect
   mcp/                    connection config for the hosted MCP server, per client
   examples/               worked briefs and the drafts they produce, all made up
@@ -28,15 +28,17 @@ Each folder's README says what it owns and which platform task builds it.
 
 ## How it talks to MCPForm.io
 
-Only through two published things: the `mcpform` command (the CLI, published to PyPI as
-`mcpform-cli` and built in the platform's `python/mcpform_cli`) and the hosted MCP server at
-`mcp.mcpform.io`. Both call the public REST API with the person's own token. The kit holds no
-platform code, no generated client and no database access of any kind.
+Only through three published things: the `mcpform` command (the CLI, published to PyPI as
+`mcpform-cli` and built in the platform's `python/mcpform_cli`), the hosted MCP server at
+`mcp.mcpform.io` and, for automations a skill helps someone write, the published `mcpform`
+Python client on PyPI. All three call the public REST API with the person's own token. The kit
+holds no platform code, no copy of a client and no database access of any kind.
 
 ## What it is for
 
 | Skill or command | Does |
 |---|---|
+| `using-mcpform` | tells an agent which surface to use: the `mcpform` command when it has a terminal, the MCP tools when it is inside a chat client, the published `mcpform` Python client when it is writing an automation. Written now; the others arrive with their platform tasks |
 | `/lead-magnet` | turns an offer, audience and campaign brief into an editable calculator, quiz or diagnostic draft through the platform's `generate_form_draft` operation, with its sources cited. It never publishes without the person's approval |
 | `/publish` | asks the person to approve, then publishes the draft as an immutable form version on a yes and returns the hosted URL and embed snippet; a no leaves it unpublished (platform D25) |
 | `/connect` | connects a workspace destination (webhook, Slack, then Zapier and HubSpot) and sends a test lead packet |
@@ -45,8 +47,15 @@ platform code, no generated client and no database access of any kind.
 Every skill reads the workspace's forms, routes and settings from the platform at run time,
 never from files here.
 
+The skills are plain folders with a `SKILL.md`. The Claude Code plugin is one way to install
+them; Codex and other agents that read skill folders install the same folders, and the MCP
+connection config under `mcp/` covers the clients that have no terminal.
+
 ## State
 
 Skeleton: READMEs only. Built by the platform's T4 (`mcpform login`, the MCP connection
 config, the plugin manifest), T5 and T7 (`/lead-magnet`, `/publish`), T10 and T11
 (`/connect`) and T9 (`/leads`). Publishing the plugin and pinning the CLI version is T14.
+
+Licence: Apache-2.0, pending the founder's confirmation (platform D34); until the `LICENSE`
+file lands, all rights reserved. Security reports: [`SECURITY.md`](SECURITY.md).

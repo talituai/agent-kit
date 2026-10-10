@@ -40,6 +40,12 @@ or MCP tool, which in turn is a public API operation; there is no back door (pla
 **8. A new skill version is published only when it scores at least as well** as the
 current one on its example set.
 
+**9. A skill is short and loads the rest on demand.** `SKILL.md` holds the job, its inputs,
+its rules and the operations it calls, in under 150 lines, because an agent reads it into the
+person's model context. Templates go in `templates/`, longer rules and examples of good
+output in `references/`, example briefs in `examples/`, and `SKILL.md` names the file to open
+for each. Form definitions and other outputs are compact by default (platform D32).
+
 ## Writing style
 
 UK spelling. Plain language. No em dashes. No Oxford comma. Explain MCP once, plainly:
