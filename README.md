@@ -57,5 +57,4 @@ Skeleton: READMEs only. Built by the platform's T4 (`talitu login`, the MCP conn
 config, the plugin manifest), T5 and T7 (`/lead-magnet`, `/publish`), T10 and T11
 (`/connect`) and T9 (`/leads`). Publishing the plugin and pinning the CLI version is T14.
 
-Licence: Apache-2.0, pending the founder's confirmation (platform D34); until the `LICENSE`
-file lands, all rights reserved. Security reports: [`SECURITY.md`](SECURITY.md).
+Licence: Apache-2.0, in [`LICENSE`](LICENSE). Security reports: [`SECURITY.md`](SECURITY.md).
