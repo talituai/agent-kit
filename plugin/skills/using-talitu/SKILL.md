@@ -1,11 +1,11 @@
 ---
-name: using-mcpform
-description: How to act on MCPForm.io from an AI agent. Read first whenever a person asks for a form, a lead magnet, a calculator, a quiz, a diagnostic, a submission, a lead or a delivery destination, to choose the right surface before doing anything.
+name: using-talitu
+description: How to act on Talitu from an AI agent. Read first whenever a person asks for a form, a lead magnet, a calculator, a quiz, a diagnostic, a submission, a lead or a delivery destination, to choose the right surface before doing anything.
 ---
 
-# Using MCPForm.io
+# Using Talitu
 
-MCPForm.io lets a business create, publish and run forms, lead magnets first, and sends each
+Talitu lets a business create, publish and run forms, lead magnets first, and sends each
 response into the tools it already uses. It works inside your AI tools: that is what MCP
 means here.
 
@@ -14,9 +14,9 @@ where you are, never by preference.
 
 | You are | Use | Because |
 |---|---|---|
-| In a terminal (Claude Code, Codex CLI, a shell) | the `mcpform` command | one command per job, compact output, `--json` for anything you need to read back |
-| In a chat client with no terminal (Claude Desktop, ChatGPT, a web agent) | the MCP tools from `mcp.mcpform.io` | the person connected them; they are the only path from here |
-| Writing an automation, a batch job or code the person will keep | the `mcpform` Python client (`pip install mcpform`) | a real library, typed, paged, with the same operations |
+| In a terminal (Claude Code, Codex CLI, a shell) | the `talitu` command | one command per job, compact output, `--json` for anything you need to read back |
+| In a chat client with no terminal (Claude Desktop, ChatGPT, a web agent) | the MCP tools from `mcp.talitu.ai` | the person connected them; they are the only path from here |
+| Writing an automation, a batch job or code the person will keep | the `talitu` Python client (`pip install talitu`) | a real library, typed, paged, with the same operations |
 
 Every one of them calls the public REST API with the person's own token. None of them can do
 more than the API, and none of them can do more than the person could.
@@ -43,4 +43,4 @@ more than the API, and none of them can do more than the person could.
 - `/connect` sends responses to a webhook, Slack, a sheet or a CRM.
 - `/leads` shows recent submissions with their score and next step.
 
-The reference for every operation is `https://docs.mcpform.io`.
+The reference for every operation is `https://docs.talitu.ai`.

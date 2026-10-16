@@ -1,6 +1,6 @@
 # `mcp/`: connection config for the hosted MCP server
 
-Ready-to-paste configuration for connecting an AI tool to `mcp.mcpform.io`: Claude Code,
+Ready-to-paste configuration for connecting an AI tool to `mcp.talitu.ai`: Claude Code,
 Claude Desktop, Codex and ChatGPT, one file each, and the sign-in flow a person sees
 (OAuth with PKCE through the platform's identity provider, platform D10).
 

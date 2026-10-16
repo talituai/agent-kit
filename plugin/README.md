@@ -7,6 +7,6 @@ MCP connection config in [`../mcp/`](../mcp/README.md).
 | | Owns | State | Built by |
 |---|---|---|---|
 | [`skills/`](skills/README.md) | one folder per job: `SKILL.md`, examples | Skeleton | T5, T7, T9, T10, T11 |
-| [`commands/`](commands/README.md) | slash commands that call the `mcpform` command or the MCP tools | Skeleton | T4 onwards |
+| [`commands/`](commands/README.md) | slash commands that call the `talitu` command or the MCP tools | Skeleton | T4 onwards |
 
 The manifest (`.claude-plugin/plugin.json`) arrives with the first command (platform T4).
